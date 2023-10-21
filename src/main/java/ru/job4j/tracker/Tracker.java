@@ -53,21 +53,20 @@ public class Tracker {
                 sizeRsl++;
             }
         }
-        rsl = Arrays.copyOf(rsl, sizeRsl);
-        return rsl;
+        return Arrays.copyOf(rsl, sizeRsl);
     }
 
     public Item[] findByName(String key) {
         Item[] rsl = new Item[items.length];
-        int sizeRsl = 0;
-        for (int i = 0; i < items.length; i++) {
+        int counter = 0;
+        for (int i = 0; i < size; i++) {
             Item item = items[i];
-            if (item != null && item.getName().equals(key)) {
+            if (item.getName().equals(key)) {
                 rsl[i] = items[i];
-                sizeRsl++;
+                counter++;
             }
         }
-        rsl = Arrays.copyOf(rsl, sizeRsl);
+        rsl = Arrays.copyOf(rsl, counter);
         return rsl;
     }
 

@@ -2,7 +2,7 @@ package ru.job4j.cast;
 
 public class Airplane implements Vehicle {
 
-    String nameClass = getClass().getSimpleName();
+    private String nameClass = getClass().getSimpleName();
 
     @Override
     public void move() {
